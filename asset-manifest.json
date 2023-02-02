@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FocusTimer/static/css/main.1f60d5fa.css",
+    "main.js": "/FocusTimer/static/js/main.0581d03a.js",
+    "static/js/787.79d17f13.chunk.js": "/FocusTimer/static/js/787.79d17f13.chunk.js",
+    "index.html": "/FocusTimer/index.html",
+    "main.1f60d5fa.css.map": "/FocusTimer/static/css/main.1f60d5fa.css.map",
+    "main.0581d03a.js.map": "/FocusTimer/static/js/main.0581d03a.js.map",
+    "787.79d17f13.chunk.js.map": "/FocusTimer/static/js/787.79d17f13.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f60d5fa.css",
+    "static/js/main.0581d03a.js"
+  ]
+}
