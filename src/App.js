@@ -6,7 +6,6 @@ import React, {
 } from "react";
 import './App.css';
 import Timer from "./Timer";
-import { timePeriod } from "./EnumTime"
 import Settings from "./Settings";
 import SettingsContext from "./SettingsContext";
 
@@ -26,18 +25,6 @@ const initAssistant = (getState/*: any*/) => {
   }
   return createAssistant({ getState });
 };
-
-function whatTime(responseActionStr) {
-  let requestedTime = undefined;
-
-  for(let i = 0; i < timePeriod.length; i++){
-    if(responseActionStr.indexOf(timePeriod[i].MinStr) !== -1 || responseActionStr.indexOf(timePeriod[i].MinNum) !== -1) {
-      requestedTime = parseInt(timePeriod[i].MinNum);
-    }
-  }
-
-  if(requestedTime !== undefined) {return requestedTime;}
-}
 
 function App() {
   const [showSettings, setShowSettings] = useState(false);
@@ -133,17 +120,6 @@ function App() {
           case "closeSettings":
             console.log("closeSettings")
             setShowSettings(false);
-            break;
-          case "setSessionTime":
-            workTime = whatTime(action.minutes);
-            console.log("setSessionTime")
-            setWorkMinutes(workTime);
-            console.log(action.minutes);
-            break;
-          case "setBreakTime":
-            breakTime = whatTime(action.minutes);
-            console.log("setBreakTime")
-            setBreakMinutes(breakTime);
             break;
           default:
             break;
